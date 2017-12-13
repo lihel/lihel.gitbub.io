@@ -32,7 +32,9 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3175603-04903afeae5938bb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3175603-ce5bd2661a1d568e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3175603-64368d03ad007db6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-10T10:33:40.168Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3175603-bf3ed408f22efd4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3175603-8358c5fb0799f567.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-12-13T13:19:39.037Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Github Pages+Hexo搭建个人博客">
 <meta name="twitter:description" content="参考教程戳这里  首先要安装node环境，安装git，注册自己的github帐号  开始安装Hexo1sudo npm install  hexo -g 创建一个文件夹，如：Blog，cd到Blog里执行hexo init1hexo init 在这里我遇到了一个错误根据提示执行命令，执行完要等一段时间，这里下载比较慢1npm install hexo --save 执行成功后用hexo -v查看h">
@@ -103,9 +105,9 @@
 		        
 					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+					<a class="qq" target="_blank" href="/835943102" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="jianshu" target="_blank" href="http://www.jianshu.com/u/4744b69eff3c" title="jianshu"><i class="icon-jianshu"></i></a>
 		        
 			</div>
 		</nav>
@@ -144,9 +146,9 @@
 			        
 						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+						<a class="qq" target="_blank" href="/835943102" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="jianshu" target="_blank" href="http://www.jianshu.com/u/4744b69eff3c" title="jianshu"><i class="icon-jianshu"></i></a>
 			        
 				</div>
 			</nav>
@@ -221,6 +223,10 @@
 <h3 id="添加和发表新文章"><a href="#添加和发表新文章" class="headerlink" title="添加和发表新文章"></a>添加和发表新文章</h3><p>创建文章：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;Github Pages+Hexo搭建个人博客&quot;</span><br></pre></td></tr></table></figure></p>
 <p>执行完后会在\Hexo\source_posts文件夹下创建一个后缀.md文件，你可以在里面添加任何字符串。这其实是一个markdown类型的文件，使用markdown语言编写．<br>添加完成后执行下列命令发布文章：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p><img src="http://upload-images.jianshu.io/upload_images/3175603-64368d03ad007db6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="发布成功"></p>
+<p>这时大工程基本完成了，接下来配置博客文章目录吧</p>
+<h3 id="配置文章目录"><a href="#配置文章目录" class="headerlink" title="配置文章目录"></a>配置文章目录</h3><p><img src="http://upload-images.jianshu.io/upload_images/3175603-bf3ed408f22efd4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="默认是这个样子的，没有显示文章列表"><br>按照提示操作就可以了，<strong>要确保node版本大于6.2</strong><br>在博客的根目录下执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm i hexo-generator-json-content --save</span><br></pre></td></tr></table></figure></p>
+<p>在根目录下的_config.yml中添加如下配置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">    meta: false</span><br><span class="line">    pages: false</span><br><span class="line">    posts:</span><br><span class="line">      title: true</span><br><span class="line">      date: true</span><br><span class="line">      path: true</span><br><span class="line">      text: false</span><br><span class="line">      raw: false</span><br><span class="line">      content: false</span><br><span class="line">      slug: false</span><br><span class="line">      updated: false</span><br><span class="line">      comments: false</span><br><span class="line">      link: false</span><br><span class="line">      permalink: false</span><br><span class="line">      excerpt: false</span><br><span class="line">      categories: false</span><br><span class="line">      tags: true</span><br></pre></td></tr></table></figure></p>
+<p>重新提交就好啦<br><img src="http://upload-images.jianshu.io/upload_images/3175603-8358c5fb0799f567.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="文章列表出来了"></p>
 
       
 
@@ -493,26 +499,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               <a href="https://chujian1.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>姚培娟</a>
             </li>
           
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
-            </li>
-          
-            <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
-            </li>
-          
         </ul>
   		
     	</section>
@@ -521,7 +507,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">感谢你这么可爱还来关注我：）</div>
   	  	
     	</section>
     
